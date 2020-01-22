@@ -64,7 +64,16 @@
                                     <input v-model="deployDebug" type="checkbox" class="form-check-input">
                                 </div>
                             </div>
-                            <div class="mycard-title" >Build:</div>
+                            <nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Build</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Deploy</a>
+    
+  </div>
+</nav>
+                            <div class="tab-content" id="nav-tabContent">
+                           <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="mycard-title" ></div>
                             <div class="mycard-content" >
                                 <div ref="build">
                                     <div style="display:none">(Disabled)</div>
@@ -90,7 +99,9 @@
                                     </div> 
                                 </div>
                             </div>
-                            <div class="mycard-title" >Install:</div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="mycard-title" style="text-align: left">Install:</div>
                             <div class="mycard-content" >
                                 <div>
                                     <div class="myfont_t">commands:</div>
@@ -98,7 +109,7 @@
                                         theme="github" width="100%" height="80"></editor>
                                 </div>
                             </div>
-                            <div class="mycard-title" >Run:</div>
+                            <div class="mycard-title" style="text-align: left">Run:</div>
                             <div class="mycard-content">
                                 <div>
                                     <div class="myfont_t">commands:</div>
@@ -106,7 +117,7 @@
                                         width="100%" height="80"></editor>
                                 </div>
                             </div>
-                            <div class="mycard-title" >Target:</div>
+                            <div class="mycard-title" style="text-align: left">Target:</div>
                             <div class="mycard-content" style="font-size:13px">
                                (CLICK cluster or DOUBLE CLICK marker to select Target.)
                             </div>
@@ -145,6 +156,8 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            </div>
                             </div>
                             <div style="text-align:left;margin:10px 0">
                                 <button class="btn btn-danger" @click="clearForm" type="button" style="font-size:14px;padding: 2.5px 5px">Clear</button></div> 
